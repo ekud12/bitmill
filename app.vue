@@ -4,7 +4,7 @@
   >
   <LogoIcon />
 
-    <h1 class="ext-5xl sm:text-6xl mt-6">bitmill.dev</h1>
+    <h1 class="ext-5xl text-4xl lg:text-7xl mt-6">bitmill.dev</h1>
     <p class="mt-4 text-base sm:text-lg text-gray-400">contact@bitmill.dev</p>
   </div>
 </template>
