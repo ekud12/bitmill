@@ -9,7 +9,7 @@ export default {
     theme: {
       extend: {
         fontFamily: {
-          PublicaPlay: ['PublicaPlay', 'sans-serif']
+          Public: ['Public', 'sans-serif']
         }
       }    },
     plugins: []
