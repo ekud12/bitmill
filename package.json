@@ -28,7 +28,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.8"
   },
-	"optionalDependencies": {
-		"@rollup/rollup-linux-x64-gnu": "^4.40.0"
-	}
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
+  }
 }
