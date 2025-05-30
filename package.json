@@ -28,7 +28,13 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.8"
   },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.6.1"
-  }
+	"optionalDependencies": {
+		"@esbuild/linux-x64": "0.24.0",
+		"@rollup/rollup-linux-x64-gnu": "^4.29.1"
+	},
+	"packageManager": "npm@10.9.2",
+	"engines": {
+		"node": ">=23.5.0",
+		"npm": ">=10.9.2"
+	}
 }
