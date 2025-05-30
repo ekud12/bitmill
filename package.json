@@ -27,5 +27,13 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.8"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.40.1"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
   }
 }
