@@ -9,9 +9,10 @@ export default {
     theme: {
       extend: {
         fontFamily: {
-          Public: ['Public', 'sans-serif']
-        }
-      }    },
+          sans: ['Public', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
     plugins: []
   }
   
