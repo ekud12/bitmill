@@ -23,7 +23,7 @@
 /* 3️⃣  SCALING + BACKGROUND */
 .logo-animated {
   /* makes the background black even if you drop the <rect> */
-  background: #000;
+  background: transparent;
   /* pick any size you want; the SVG keeps its aspect ratio */
   width: 96px; /* ← change this to scale the whole thing */
   aspect-ratio: 72/76.8;
@@ -190,7 +190,7 @@
     stroke: #00DC82;
   }
   30% {
-    stroke: #29ABE2;
+    stroke: #88ff00;
   }
   45% {
     stroke: #fff;
@@ -234,7 +234,7 @@
     stroke: #fff;
   }
   100% {
-    stroke: #29ABE2;
+    stroke: #88ff00;
     opacity: 1;
   }
 }
