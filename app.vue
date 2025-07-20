@@ -3,6 +3,13 @@
     <!-- Skip to main content link for screen readers -->
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-galah-rose text-white px-4 py-2 rounded z-50">Skip to main content</a>
 
+    <!-- Bitmill.dev branding in upper left -->
+    <div class="fixed top-4 sm:top-6 lg:top-8 left-4 sm:left-6 lg:left-8 z-30">
+      <span class="brand-fade-in text-sm sm:text-base lg:text-lg font-medium text-galah-slate/70 tracking-wide uppercase font-mono matrix-text">
+        <span class="matrix-char" data-char="b">b</span><span class="matrix-char" data-char="i">i</span><span class="matrix-char" data-char="t">t</span><span class="matrix-char" data-char="m">m</span><span class="matrix-char" data-char="i">i</span><span class="matrix-char" data-char="l">l</span><span class="matrix-char" data-char="l">l</span><span class="matrix-char" data-char=".">.</span><span class="matrix-char" data-char="d">d</span><span class="matrix-char" data-char="e">e</span><span class="matrix-char" data-char="v">v</span>
+      </span>
+    </div>
+
     <main id="main" role="main" class="relative z-10 flex flex-col items-center justify-center w-full">
       <!-- Logo Component centered -->
       <div class="scale-100 sm:scale-125 lg:scale-150 flex justify-center mb-4 sm:mb-6 lg:mb-8" role="img" aria-label="bitmill logo">
@@ -154,6 +161,44 @@ useHead({
     { property: 'og:description', content: 'Next-generation GPU-accelerated build tools. 10x faster builds with zero compromise.' },
     { name: 'twitter:card', content: 'summary_large_image' }
   ]
+})
+
+// Matrix text scramble effect for branding
+onMounted(() => {
+  const matrixChars = document.querySelectorAll('.matrix-char') as NodeListOf<HTMLElement>
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?'
+  
+  if (matrixChars.length === 0) return
+  
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (prefersReducedMotion) return
+  
+  // Initialize each character with random scramble
+  matrixChars.forEach((char, index) => {
+    const targetChar = char.getAttribute('data-char') || ''
+    let scrambleCount = 0
+    const maxScrambles = 15 + Math.floor(Math.random() * 10) // Random scrambles between 15-25
+    
+    // Start scrambling after a delay based on position
+    setTimeout(() => {
+      const scrambleInterval = setInterval(() => {
+        if (scrambleCount < maxScrambles) {
+          // Show random character
+          char.textContent = charset[Math.floor(Math.random() * charset.length)]
+          scrambleCount++
+        } else {
+          // Reveal the correct character
+          char.textContent = targetChar
+          char.style.color = '#e8a7b3' // Flash pink when resolved
+          setTimeout(() => {
+            char.style.color = '' // Return to original color
+          }, 300)
+          clearInterval(scrambleInterval)
+        }
+      }, 50) // Change character every 50ms
+    }, index * 100 + 500) // Stagger start time for each character
+  })
 })
 
 // Infinite typewriter effect
@@ -348,7 +393,33 @@ button:focus {
   white-space: normal;
 }
 
-/* Contact section animations */
+/* Brand and contact section animations */
+.brand-fade-in {
+  animation: brandFadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes brandFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Matrix text effect */
+.matrix-text {
+  display: inline-block;
+}
+
+.matrix-char {
+  display: inline-block;
+  transition: color 0.3s ease;
+  min-width: 0.6ch;
+  text-align: center;
+}
+
 .contact-fade-in {
   animation: contactFadeIn 2s ease-out 2s forwards;
   opacity: 0;
@@ -451,6 +522,7 @@ button:focus {
   .text-reveal-delay-1,
   .text-reveal-delay-2,
   .text-reveal-delay-3,
+  .brand-fade-in,
   .contact-fade-in,
   .pulse-dot,
   .typewriter-cursor,
