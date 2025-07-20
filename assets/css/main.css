@@ -17,3 +17,68 @@
     overflow-x: hidden;
   }
 }
+
+@layer utilities {
+  /* Galah color utilities */
+  .text-galah-pink { color: #e8a7b3; }
+  .text-galah-rose { color: #c76078; }
+  .text-galah-feather { color: #cdd0d4; }
+  .text-galah-gray { color: #8e959f; }
+  .text-galah-slate { color: #5b5e61; }
+  .text-galah-white { color: #f3f4f6; }
+  
+  .bg-galah-pink { background-color: #e8a7b3; }
+  .bg-galah-rose { background-color: #c76078; }
+  .bg-galah-feather { background-color: #cdd0d4; }
+  .bg-galah-gray { background-color: #8e959f; }
+  .bg-galah-slate { background-color: #5b5e61; }
+  .bg-galah-white { background-color: #f3f4f6; }
+
+  /* Gradient utilities */
+  .from-galah-pink { --tw-gradient-from: #e8a7b3 var(--tw-gradient-from-position); }
+  .from-galah-rose { --tw-gradient-from: #c76078 var(--tw-gradient-from-position); }
+  .from-galah-feather { --tw-gradient-from: #cdd0d4 var(--tw-gradient-from-position); }
+  .from-galah-gray { --tw-gradient-from: #8e959f var(--tw-gradient-from-position); }
+  .from-galah-slate { --tw-gradient-from: #5b5e61 var(--tw-gradient-from-position); }
+  .from-galah-white { --tw-gradient-from: #f3f4f6 var(--tw-gradient-from-position); }
+  
+  .via-galah-pink { --tw-gradient-via: #e8a7b3 var(--tw-gradient-via-position); }
+  .via-galah-rose { --tw-gradient-via: #c76078 var(--tw-gradient-via-position); }
+  .via-galah-feather { --tw-gradient-via: #cdd0d4 var(--tw-gradient-via-position); }
+  .via-galah-gray { --tw-gradient-via: #8e959f var(--tw-gradient-via-position); }
+  .via-galah-slate { --tw-gradient-via: #5b5e61 var(--tw-gradient-via-position); }
+  .via-galah-white { --tw-gradient-via: #f3f4f6 var(--tw-gradient-via-position); }
+  
+  .to-galah-pink { --tw-gradient-to: #e8a7b3 var(--tw-gradient-to-position); }
+  .to-galah-rose { --tw-gradient-to: #c76078 var(--tw-gradient-to-position); }
+  .to-galah-feather { --tw-gradient-to: #cdd0d4 var(--tw-gradient-to-position); }
+  .to-galah-gray { --tw-gradient-to: #8e959f var(--tw-gradient-to-position); }
+  .to-galah-slate { --tw-gradient-to: #5b5e61 var(--tw-gradient-to-position); }
+  .to-galah-white { --tw-gradient-to: #f3f4f6 var(--tw-gradient-to-position); }
+
+  /* Background with opacity utilities */
+  .bg-galah-pink\/10 { background-color: rgb(232 167 179 / 0.1); }
+  .bg-galah-pink\/15 { background-color: rgb(232 167 179 / 0.15); }
+  .bg-galah-pink\/20 { background-color: rgb(232 167 179 / 0.2); }
+  .bg-galah-pink\/30 { background-color: rgb(232 167 179 / 0.3); }
+  .bg-galah-pink\/40 { background-color: rgb(232 167 179 / 0.4); }
+  
+  .bg-galah-rose\/10 { background-color: rgb(199 96 120 / 0.1); }
+  .bg-galah-rose\/15 { background-color: rgb(199 96 120 / 0.15); }
+  .bg-galah-rose\/20 { background-color: rgb(199 96 120 / 0.2); }
+  .bg-galah-rose\/30 { background-color: rgb(199 96 120 / 0.3); }
+  .bg-galah-rose\/40 { background-color: rgb(199 96 120 / 0.4); }
+  
+  .bg-galah-feather\/10 { background-color: rgb(205 208 212 / 0.1); }
+  .bg-galah-feather\/15 { background-color: rgb(205 208 212 / 0.15); }
+  .bg-galah-feather\/20 { background-color: rgb(205 208 212 / 0.2); }
+  
+  .bg-galah-gray\/10 { background-color: rgb(142 149 159 / 0.1); }
+  .bg-galah-gray\/20 { background-color: rgb(142 149 159 / 0.2); }
+  .bg-galah-gray\/30 { background-color: rgb(142 149 159 / 0.3); }
+  
+  .bg-galah-slate\/10 { background-color: rgb(91 94 97 / 0.1); }
+  .bg-galah-slate\/20 { background-color: rgb(91 94 97 / 0.2); }
+  .bg-galah-slate\/30 { background-color: rgb(91 94 97 / 0.3); }
+  .bg-galah-slate\/40 { background-color: rgb(91 94 97 / 0.4); }
+}

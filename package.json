@@ -7,7 +7,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@nuxt/eslint": "^1.4.1",
@@ -26,15 +29,21 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.8"
+    "@nuxt/test-utils": "^3.19.2",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vitest/ui": "^3.2.4",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^18.0.1",
+    "vitest": "^3.2.4"
   },
-	"optionalDependencies": {
-		"@esbuild/linux-x64": "0.24.0",
-		"@rollup/rollup-linux-x64-gnu": "^4.29.1"
-	},
-	"packageManager": "npm@10.9.2",
-	"engines": {
-		"node": ">=22.16.0",
-		"npm": ">=10.9.2"
-	}
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "0.24.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.29.1"
+  },
+  "packageManager": "npm@10.9.2",
+  "engines": {
+    "node": ">=22.16.0",
+    "npm": ">=10.9.2"
+  }
 }
